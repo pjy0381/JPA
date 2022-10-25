@@ -1,4 +1,4 @@
-package com.example.jpaExam.domain;
+package com.example.jpaExam.common;
 
 public enum OrderStatus {
     ORDER,CANCEL
