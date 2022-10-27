@@ -24,16 +24,14 @@ public class JpaExamApplication {
 		try {
 			//비영속
 			Member member = new Member();
-			member.setUsername("A");
 			em.persist(member);
 
-			Order order = new Order();
-			order.setStatus(OrderStatus.ORDER);
 
-			order.setMember(member);
+			Order order = new Order();
+			order.changeMember(member);
 			em.persist(order);
 
-			System.out.println(order.getMember().getId()+"===============");
+
 			tx.commit();
 		}catch (Exception e){
 			tx.rollback();
