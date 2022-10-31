@@ -1,27 +1,25 @@
 package com.example.jpaExam.domain;
 
-import lombok.*;
+import com.example.jpaExam.common.DeliveryStatus;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Member {
+public class Delivery {
+
     @Id
     @GeneratedValue
-    @Column(name = "member_id")
     private Long id;
 
-    private String username;
-
     private String city;
-
     private String street;
-
     private String zipcode;
+    private DeliveryStatus status;
 
+    @OneToOne(mappedBy = "delivery")
+    private Order order;
 }

@@ -23,13 +23,6 @@ public class JpaExamApplication {
 
 		try {
 			//비영속
-			Member member = new Member();
-			em.persist(member);
-
-
-			Order order = new Order();
-			order.changeMember(member);
-			em.persist(order);
 
 
 			tx.commit();
