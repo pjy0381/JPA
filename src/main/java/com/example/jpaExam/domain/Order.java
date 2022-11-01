@@ -1,5 +1,6 @@
 package com.example.jpaExam.domain;
 
+import com.example.jpaExam.common.BaseEntity;
 import com.example.jpaExam.common.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +17,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class Order extends BaseEntity {
     @Id
     @GeneratedValue
     @Column(name = "order_id")

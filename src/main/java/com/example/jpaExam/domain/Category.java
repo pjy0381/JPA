@@ -1,5 +1,6 @@
 package com.example.jpaExam.domain;
 
+import com.example.jpaExam.common.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +11,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category {
+public class Category extends BaseEntity {
 
     @Id
     @GeneratedValue

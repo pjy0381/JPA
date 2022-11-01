@@ -1,5 +1,6 @@
 package com.example.jpaExam.domain;
 
+import com.example.jpaExam.common.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -10,13 +11,13 @@ import java.util.List;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Member {
+public class Member extends BaseEntity {
     @Id
     @GeneratedValue
     @Column(name = "member_id")
     private Long id;
 
-    private String username;
+        private String username;
 
     private String city;
 

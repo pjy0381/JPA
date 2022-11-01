@@ -1,5 +1,6 @@
 package com.example.jpaExam;
 
+import com.example.jpaExam.domain.Book;
 import com.example.jpaExam.domain.Member;
 import com.example.jpaExam.domain.Order;
 import com.example.jpaExam.common.OrderStatus;
@@ -23,8 +24,9 @@ public class JpaExamApplication {
 
 		try {
 			//비영속
-
-
+			Book book = new Book("김영한","11111");
+			book.setName("JPA");
+			em.persist(book);
 			tx.commit();
 		}catch (Exception e){
 			tx.rollback();
