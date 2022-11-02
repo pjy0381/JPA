@@ -27,6 +27,15 @@ public class JpaExamApplication {
 			Book book = new Book("김영한","11111");
 			book.setName("JPA");
 			em.persist(book);
+
+			em.flush();
+			em.clear();
+
+			Book b1 = em.getReference(Book.class,book.getId());
+			b1.getName();
+
+			System.out.println(emf.getPersistenceUnitUtil().isLoaded(b1));
+
 			tx.commit();
 		}catch (Exception e){
 			tx.rollback();
