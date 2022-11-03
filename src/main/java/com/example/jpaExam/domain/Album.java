@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Album extends Item{
+public class Album extends Item {
     private String artist;
     private String etc;
 }

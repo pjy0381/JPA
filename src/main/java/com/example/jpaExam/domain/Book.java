@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Book extends Item{
+public class Book extends Item {
     private String author;
     private String isbn;
 }
